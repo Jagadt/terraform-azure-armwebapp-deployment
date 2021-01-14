@@ -44,7 +44,7 @@ variable "networkSecurityGroupName" {
 }
 
 variable "networkSecurityGroupRules" {
-  type        = map
+  type        = list
   description = "NSG rules"
 }
 
@@ -59,12 +59,12 @@ variable "virtualNetworkName" {
 }       
 
 variable "addressPrefixes" {
-  type        = map
+  type        = list
   description = "address prefixes"
 } 
 
 variable "subnets" {
-  type        = map
+  type        = list
   description = "subnets"
 } 
 
