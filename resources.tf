@@ -1,3 +1,14 @@
+terraform {
+  required_version = ">= 0.12.6"
+    backend "remote" {
+      organization = "WPPITPOC"
+    
+# The name of the Terraform Cloud workspace to store Terraform state files
+    workspaces {
+      name = "terraform-azure-armwebapp-deployment"
+    }
+  }
+ }
 # Creates a resource group
 resource "azurerm_resource_group" "example" {
   name     = var.resource_group_name
