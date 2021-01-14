@@ -44,7 +44,7 @@ variable "networkSecurityGroupName" {
 }
 
 variable "networkSecurityGroupRules" {
-  type        = array
+  type        = map
   description = "NSG rules"
 }
 
@@ -59,12 +59,12 @@ variable "virtualNetworkName" {
 }       
 
 variable "addressPrefixes" {
-  type        = array
+  type        = map
   description = "address prefixes"
 } 
 
 variable "subnets" {
-  type        = array
+  type        = map
   description = "subnets"
 } 
 
@@ -114,7 +114,7 @@ variable "adminUsername" {
 }  
 
 variable "adminPassword" {
-  type        = securestring
+  type        = string
   description = "adminpassword"
 }  
 
