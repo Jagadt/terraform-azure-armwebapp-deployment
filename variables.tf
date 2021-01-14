@@ -32,3 +32,95 @@ variable "deployment_count" {
   type        = number
   description = "Number of template deployments"
 }
+
+variable "networkInterfaceName" {
+  type        = string
+  description = "VM network interface name"
+}
+
+variable "networkSecurityGroupName" {
+  type        = string
+  description = "NSG name"
+}
+
+variable "networkSecurityGroupRules" {
+  type        = array
+  description = "NSG rules"
+}
+
+variable "subnetName" {
+  type        = string
+  description = "subnet name"
+}
+
+variable "virtualNetworkName" {
+  type        = string
+  description = "virtual network name"
+}       
+
+variable "addressPrefixes" {
+  type        = array
+  description = "address prefixes"
+} 
+
+variable "subnets" {
+  type        = array
+  description = "subnets"
+} 
+
+variable "publicIpAddressName" {
+  type        = string
+  description = "subnets"
+} 
+        
+variable "publicIpAddressType" {
+  type        = string
+  description = "type"
+}    
+
+variable "publicIpAddressSku" {
+  type        = string
+  description = "sku"
+}  
+        
+variable "virtualMachineName" {
+  type        = string
+  description = "vmname"
+}         
+       
+variable "virtualMachineComputerName" {
+  type        = string
+  description = "vmnamecomputer"
+}    
+
+variable "virtualMachineRG" {
+  type        = string
+  description = "vmrg"
+}   
+
+variable "osDiskType" {
+  type        = string
+  description = "disktype"
+} 
+
+variable "virtualMachineSize" {
+  type        = string
+  description = "vmsize"
+}        
+       
+variable "adminUsername" {
+  type        = string
+  description = "adminusername"
+}  
+
+variable "adminPassword" {
+  type        = securestring
+  description = "adminpassword"
+}  
+
+variable "patchMode" {
+  type        = string
+  description = "patchmode"
+}        
+       
+       
