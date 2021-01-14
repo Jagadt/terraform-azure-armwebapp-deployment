@@ -23,6 +23,12 @@
           "description": "The SKU tier of App Service Plan"
         }
       },
+      "networkSecurityGroupName": {
+            "type": "string",
+            "metadata": {
+                "description": "This is the name of the network security group"
+            }
+      },  
       "location": {
         "type": "string",
         "defaultValue": "[resourceGroup().location]",
@@ -61,7 +67,14 @@
         "dependsOn": [
           "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]"
         ]
-      }
+      },
+      {
+            "apiVersion": "2019-02-01",
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "name": "[parameters('networkSecurityGroupName')]",
+            "location": "[parameters('location')]",
+            "tags": {}
+      }  
     ],
     "outputs": {
         "hostName": {
