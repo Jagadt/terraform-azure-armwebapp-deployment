@@ -26,6 +26,24 @@ resource "azurerm_template_deployment" "azure_web_app" {
     webAppName = var.webapp_name
     appSkuName = var.sku_name
     appSkuTier = var.sku_tier
+    addressPrefixes = var.addressPrefixes
+    subnets = var.subnets
+    publicIpAddressName = var.publicIpAddressName
+    networkSecurityGroupName = var.networkSecurityGroupName
+    networkInterfaceName = var.networkInterfaceName
+    networkSecurityGroupRules = var.networkSecurityGroupRules
+    subnetName = var.subnetName
+    virtualNetworkName = var.virtualNetworkName
+    publicIpAddressType = var.publicIpAddressType
+    publicIpAddressSku = var.publicIpAddressSku
+    virtualMachineName = var.virtualMachineName
+    virtualMachineComputerName = var.virtualMachineComputerName
+    virtualMachineRG = var.virtualMachineRG
+    osDiskType = var.osDiskType
+    virtualMachineSize = var.virtualMachineSize
+    adminUsername = var.adminUsername
+    adminPassword = var.adminPassword 
+    patchMode = var.patchMode
   }
 
   deployment_mode = "Incremental"
